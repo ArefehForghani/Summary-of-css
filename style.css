@@ -1,0 +1,488 @@
+
+a:link {
+    display: block;
+    color: cadetblue;
+    font-size: 40px;
+}
+a:visited{
+    color: darkorange;
+}
+
+/*1._______________________________________ */
+
+body{
+    background-color: dimgrey;
+}
+
+section:target{
+    background-color: darkgreen;
+}
+a{
+    display: table;
+    margin:10px auto;
+    padding: 10px;
+    /*background-color: darkgoldenrod;*/
+    text-decoration: none;
+   
+}
+
+section{
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 300px;
+}
+
+/*2._______________________________________ */
+
+input:focus,
+textarea:focus,
+button:focus{
+    outline: 0;
+    outline: 3px solid tomato;
+
+    border-radius: 15px;
+}
+
+/*3._______________________________________ */
+/*زمانی که موس رو روی آن میرم*/
+input[type="button"]:hover{
+    background-color: chartreuse;
+    font:30px ;
+}
+
+a:hover{
+    color: lightgoldenrodyellow;
+}
+
+/*زمانی که کلیک میکنم */
+input[type="button"]:active{
+    background-color:blue;
+    font:30px ;
+   
+}
+
+/*4._______________________________________ */
+#id-p{
+    direction: rtl;
+}
+
+/*5._______________________________________ */
+
+#input-id:enabled{
+   border: 3px solid royalblue;
+}
+#click-id:enabled{background-color: cadetblue;}
+
+/*6._______________________________________ */
+
+#tcheckbox:disabled + label{
+    /*حالت موس*/
+    cursor:not-allowed ;
+    
+}
+#button:disabled{
+    background-color: greenyellow;
+    color: bisque;
+    border: 2px;
+    cursor: not-allowed;
+    padding: 5px;
+}
+
+/*7._______________________________________ */
+
+/*هنگام چک شدن اینها اعمال میشود*/
+#checkbox1:checked+label{
+    color:red;
+    text-decoration: line-through;
+}
+
+/*8._______________________________________ */
+
+/*هنگام معتبر نبودن این ویژگی ها اعمال نمیشود*/
+
+#number:valid{
+    background-color: darkorange;
+    border: 3px solid rosybrown;
+}
+/*هنگام معتبر نبودن این ویژگی ها اعمال نمیشود*/
+#number:invalid{
+    background-color: red;
+
+}
+
+
+/*9._______________________________________ */
+
+/*رعایت محدودیت مقادیر این ویژگی ها اعمال شود*/
+#range:in-range{
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+}
+/*عدم محدودیت مقادیر این ویژگی ها اعمال شود*/
+#range:out-of-range{
+    background-color: tomato;
+    padding: 10px;
+}
+
+/*10._______________________________________ */
+/* ایجاد تغییرات روی حرف اول*/
+/*first-line برای خط اول*/
+
+#p1::first-letter{
+    font-size: 150px;
+    color: tomato;
+    background-color: peachpuff;
+}
+
+/*11._______________________________________ */
+
+/* هنگام سلکت کردن این رنگ اعمال میشود*/
+
+::selection{
+    background-color: blueviolet ;
+    color: #000;
+}
+#p2::selection{
+    color: #000;
+    background-color: burlywood;
+}
+
+/*12._______________________________________ */
+/* ارث بری*/
+#p3{font-family: fantasy;
+font-size: 100%;
+color: darkorange;
+}
+#a1{
+    color: inherit;
+    
+}
+
+
+/*13._______________________________________ */
+
+/*overFlow
+هنگامی که متن سر ریز شود*/
+#p4{
+    width: 310px;
+    height: 251px;
+    background-color: tomato;
+    overflow:auto;
+}
+
+/*14._______________________________________ */
+/* box-sizing */
+
+.container{
+    max-width: 700px;
+    overflow: auto;
+    margin: 5px auto;
+}
+#heder,#main-section,#aside,#footer{
+    border: 3px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#heder{
+    height: 100px;
+    line-height: 100px;
+    
+}
+
+#main-section{
+    float: left;
+    width: 60%;
+   height: 300px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   
+   
+}
+#aside{
+    float:right;
+    width: 30%;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer{
+    clear: both;
+    padding: 30px;
+}
+*{
+    
+    box-sizing: border-box;
+}
+
+/*15._______________________________________ */
+/*در تراز قرار دادن عناصر*/
+
+#div1{
+    background-color: khaki;
+    margin-top: 10px;
+    max-width: 700px;
+}
+
+#photo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    /* middle:وسط baseline:پایین super:پایین تر text-top:بالا */
+    vertical-align: middle;
+}
+
+/*16._______________________________________ */
+
+/* فیکس کردن جمله در صفحه و حرکت آن همراه با اسکرول*/
+#fix{
+position:absolute;
+top: 0;
+right: 0;
+
+border: 3px solid red;
+background-color: gainsboro;
+
+}
+
+/*17._______________________________________ */
+/*حرکت روی محور دو بعدی*/
+
+.element{
+    width: 40px;
+    height: 40px;
+    background-color: cadetblue;
+    transition: transform 2s;
+}
+.container1{
+    border:3px solid black;
+    background-color:pink;
+    height: 100px;
+    width: 200px;
+
+   
+}
+
+.container:hover .element{
+    transform: translate(100px,20px);
+}
+
+/*18._______________________________________ */
+/*بزرگ و کوچک کردن عنصر*/
+
+.element2{
+    width: 40px;
+    height: 40px;
+    background-color: cadetblue;
+    transition: transform 2s;}
+
+.element2:hover{
+    transform: scale(2,2);
+}    
+
+/*19._______________________________________ */
+/*چرخاندن عنصر*/
+.element3{
+    width: 40px;
+    height: 40px;
+    background-color: cadetblue;
+    transition: transform 2s;}
+
+.element3:hover{
+    transform: rotate(180deg);
+}    
+
+/*20._______________________________________ */
+/*مورب کردن عنصر*/
+.element4{
+    width: 40px;
+    height: 40px;
+    background-color: cadetblue;
+    transition: transform 2s;}
+
+.element4:hover{
+    transform: skew(20deg,20deg);
+}    
+
+/*21._______________________________________ */
+/*flexbox*/
+.container-box-1 div , .container-box-2 div{
+    border:1px solid #ccc;
+    padding: 10px;
+    
+    
+}
+
+@media(min-width:768px) {
+    
+
+.container-box-1 {
+   display:flex;
+   
+
+   /*
+   از بالا تا جایی که تمام شود
+   align-items: flex-start;
+
+    از پایین تا جایی که تمام شود
+    align-items: flex-end;
+    
+   در وسط قرار میگیرد
+    align-items: center;
+
+    پیش فرض*
+    align-items: stretch;
+
+   قرار گرفتن بصورت عمودی
+    flex-direction: column;
+    */
+}
+
+.container-box-2{
+    display:flex;
+/*
+    از راست تا جایی که تمام شود
+    justify-content: flex-start;
+
+    
+    از چپ تا جایی که تمام شود
+    justify-content: flex-end;
+
+    در وسط قرار میگیرد
+    justify-content: center;
+
+    justify-content: space-around;
+    */
+
+    justify-content: space-between;
+    
+} 
+}
+
+.box-1{
+    flex:2;
+    order: 2;
+    
+}
+.box-2{
+    flex:1;
+    order: 1;
+}
+.box-3{
+    flex:1;
+    order: 3;
+    flex-grow: 4;
+}
+.c1-box{
+    flex-basis:  32%;
+}
+.c2-box{
+    flex-basis: 32%;
+}
+.c3-box{
+    flex-basis: 32%;
+}
+
+
+/*22._______________________________________ */
+/*Grid*/
+
+.g-container div{
+    background-color: #eee;
+    padding: 1em;
+}
+.g-container div:nth-child(odd){
+    background-color: rgb(180, 177, 177);
+}
+
+.g-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+    /*grid-template-columns: 1fr 1f1 1fr;
+    grid-template-columns:repeat(3,1fr)*/
+
+    /*اندازه داخل باکس*/
+    grid-auto-rows: minmax(150px,auto);
+    /*
+    فاصله بین ستونها
+    grid-column-gap:15px ;
+
+    فاصله بین سطر ها
+    grid-row-gap:15px;
+    */
+
+    /*فاصله بین ستون و سطر*/
+    grid-gap:15px;
+}
+
+.nested{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows:50px ;
+    grid-gap:15px;
+    
+}
+.nested div{
+    border: 1px #333 solid;
+    
+}
+
+
+
+
+
+
+
+/*23._______________________________________ */
+
+/*flex-wrap*/
+
+.Container3{
+    background-color:#607D8B;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+   
+   .Item{
+    background-color:#f2f2f2;
+    color:#000; 
+    font-size:25px;
+    margin:5px;
+    padding:36px;
+   }
+
+/*24._______________________________________ */
+
+/*flex-shrink*/
+.MyContainer{
+    background-color:#607D8B;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+   }
+.MyItem{
+    background-color:#f2f2f2;
+    color:#000; 
+    font-size:25px;
+    margin:5px;
+    padding:20px;
+    width:150px;
+    text-align:center;
+   }
+   
+   .MyShrink{
+    
+    background-color:yellow;
+   }
+   
+/*25._______________________________________ */
+/*موقع کوچک کردن صفحه به اندازه مشخص شدهتغیرات اعمال میشود*/
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
